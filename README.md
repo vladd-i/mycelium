@@ -21,6 +21,23 @@ Spec: the "1-hour demo spec (v2)" doc on the same board.
 4. **Your name** (optional): `export MYC_AUTHOR=yourname` in your shell profile. If it isn't set, the skills use `git config user.name`.
 5. **Smoke test:** `/search-team-knowledge why do our tests fail overnight` should find the seeded sticky about the staging database.
 
+## Using the skills in claude.ai chat (no Claude Code)
+
+The same skills run in claude.ai. You don't need Claude Code or a terminal.
+
+1. **Turn on code execution:** claude.ai → Settings → Capabilities → enable **Code execution and file creation** (skills need it). On Team or Enterprise plans, an org admin may need to allow skills first.
+2. **Upload the skills:** download [`dist/share-learning.zip`](dist/share-learning.zip) and [`dist/search-team-knowledge.zip`](dist/search-team-knowledge.zip) from this repo (open the file on GitHub → **Download raw file**). Then go to claude.ai → Settings → Capabilities → **Skills** → **Upload skill**, once for each zip. Don't unzip them.
+3. **Connect Miro:** claude.ai → Settings → Connectors → **Miro** → Connect, signing in with the account that has access to the board. In a new chat, check that Miro is turned on in the tools menu.
+4. **Use them by asking.** In claude.ai, skills load based on what you ask, not on slash commands:
+   - "Check our team knowledge first: <problem>"
+   - "Share what we learned in this chat to the team hub"
+
+Fallback if you can't upload skills: create a Project and paste the body of each `SKILL.md` into the project instructions.
+
+## Updating the skills
+
+Edit `.claude/skills/*/SKILL.md`, then run `./package.sh` and commit the rebuilt `dist/*.zip`. Claude Code users get the change with `git pull`. claude.ai users have to re-upload the zips.
+
 ## Sticky format
 
 Both skills read and write this format. You can also add stickies to the hub by hand: they're picked up even if they don't follow the format.
@@ -39,4 +56,7 @@ BY: <author> · <YYYY-MM-DD>
 .claude/skills/share-learning/SKILL.md          # capture: session → approved stickies on the board
 .claude/skills/search-team-knowledge/SKILL.md   # retrieval: board → relevant learnings → solve
 install.sh                                      # symlink skills into ~/.claude/skills
+package.sh                                      # build dist/*.zip for claude.ai upload
+dist/                                           # prebuilt zips for claude.ai
+DEMO.md                                         # 5-minute demo scenario
 ```
