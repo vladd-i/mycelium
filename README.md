@@ -43,7 +43,8 @@ Edit `.claude/skills/*/SKILL.md`, then run `./package.sh` and commit the rebuilt
 Both skills read and write this format. You can also add stickies to the hub by hand: they're picked up even if they don't follow the format.
 
 ```
-💡 <1–2 sentence self-contained claim>
+💡 <summary, at most 5 words>
+<1–2 sentence self-contained claim>
 WHEN: <situation where this matters>
 HOW WE KNOW: <error seen / test run / doc read>
 TAGS: #<topic> #<entity>

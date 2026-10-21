@@ -23,7 +23,9 @@ The user's problem is in the arguments or the message (if there's none, use the 
 3. **Report before you start working.** Use this shape:
 
    > 🍄 **From the team knowledge hub**
-   > - **<author>** found: <claim> — *when:* <WHEN> ([sticky](https://miro.com/app/board/uXjVEXWzxyc=/?moveToWidget=<id>))
+   > - **<summary>** — <author> found: <claim> — *when:* <WHEN> ([sticky](https://miro.com/app/board/uXjVEXWzxyc=/?moveToWidget=<id>))
+
+   A sticky's first line (after 💡) is a summary of at most 5 words and the next line is the claim. Older and handwritten stickies may have no summary line; for those, write a short one yourself.
    > - …
    > **How this changes my approach:** <one or two sentences>
 

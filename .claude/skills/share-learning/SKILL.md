@@ -21,6 +21,7 @@ Turn this session into 1–3 learnings that a teammate on a *different* task wou
    - Good: non-obvious facts about a system, codebase, tool, API, or data; gotchas and their fixes; decisions and why they were made; approaches that did NOT work.
    - Bad: a story of what was done, trivia, or anything that only makes sense inside this session.
    - Each claim must stand on its own: name the specific tool, system, or file, and don't use "we", "I", or "the user".
+   - Give each learning a summary of at most 5 words that says the lesson itself, not just its topic ("Update, never create, existing frames", not "Miro frames"). The landing page and hub previews show only this line.
    - Zero is a valid answer. If nothing is transferable, say so and stop.
 
 3. **Approve.** Show the drafts to the user in the exact sticky format below and ask them to approve, edit, or drop each one. Post only what they approve.
@@ -33,7 +34,7 @@ Turn this session into 1–3 learnings that a teammate on a *different* task wou
    <svg viewBox="0 0 3840 2160" xmlns="http://www.w3.org/2000/svg">
    <g data-miro-id="3458764687994986893" transform="translate(1700,-164)" data-frame="🍄 Knowledge Hub">
    <rect data-type="sticky" x="40" y="308" width="350" height="228" data-color="light_yellow"
-     data-content="💡 CLAIM&lt;br&gt;WHEN: ...&lt;br&gt;HOW WE KNOW: ...&lt;br&gt;TAGS: #topic #entity&lt;br&gt;BY: AUTHOR · YYYY-MM-DD" />
+     data-content="💡 SUMMARY&lt;br&gt;CLAIM&lt;br&gt;WHEN: ...&lt;br&gt;HOW WE KNOW: ...&lt;br&gt;TAGS: #topic #entity&lt;br&gt;BY: AUTHOR · YYYY-MM-DD" />
    </g>
    </svg>
    ```
@@ -47,7 +48,8 @@ Turn this session into 1–3 learnings that a teammate on a *different* task wou
 ## Sticky format (the contract shared with search-team-knowledge)
 
 ```
-💡 <1–2 sentence self-contained claim>
+💡 <summary, at most 5 words>
+<1–2 sentence self-contained claim>
 WHEN: <situation where this matters>
 HOW WE KNOW: <error seen / test run / doc read>
 TAGS: #<topic> #<entity> #<entity>
